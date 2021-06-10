@@ -25,6 +25,8 @@ Route::post('register/pre_check', 'Auth\RegisterController@pre_check')->name('re
 //本登録及び登録完了
 Route::get('register/verify/{token}', 'Auth\RegisterController@showForm');
 
+Route::resource('posts', "PostController");
+
 //ログイン画面の表示
 Route::get('/signup', "UserController@getSignup")->name("signup");
 

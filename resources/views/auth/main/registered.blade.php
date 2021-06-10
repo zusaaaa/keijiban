@@ -12,7 +12,7 @@
                         <a href="{{url('/')}}" class="sg-btn">トップページへ戻る</a>
 
                     </div>
-                </div>
+                </div>aaaa
             </div>
         </div>
     </div>
