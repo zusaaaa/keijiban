@@ -11,13 +11,15 @@
 |
 */
 
-//トップページ
-Route::get('/', "ArticleController@showList")->name("toppage");
+//投稿機能一式(一覧表示(トップページ) 詳細表示、新規投稿)
+Route::resource('posts', 'PostController');
 
-//記事詳細画面の表示
-Route::get('/article/{id}', "ArticleController@showDetail")->name("show");
+//コメント機能一式
+Route::resource('comments', 'CommentController');
 
 Auth::routes();
+
+Route::get("/logout", "UserController@getLogout");
 
 //仮登録
 Route::post('register/pre_check', 'Auth\RegisterController@pre_check')->name('register.pre_check');

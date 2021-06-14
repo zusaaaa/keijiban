@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
+use App\Models\Post;
 
 class ArticleController extends Controller
 {
@@ -15,8 +16,8 @@ class ArticleController extends Controller
      */
 
     public function showList() {
-        $articles = Article::all();
-        return view("article.list", ["articles" => $articles]);
+        $posts = Post::all();
+        return view("article.list", compact("posts"));
     }
 
 
