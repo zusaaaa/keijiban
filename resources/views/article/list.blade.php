@@ -2,8 +2,12 @@
 @section("content")
 <div id="main">
 <form action="" method="GET">
-  @foreach($articles as $article)
-    <div id="article_title"><a href="/article/{{ $article->id }}">{{ $article->title}}</a></div>
+  @foreach($posts as $post)
+  <div class="card-body">
+    <h5 class="card-title">タイトル:{{ $post->title }}</h5>
+    <a href="#" class="btn btn-primary">詳細へ</a>
+  </div>
+    <div  id="article_title"><a href="/article/{{ $post->id }}">{{ $post->title}}</a></div>
   @endforeach
 </form>
 </div>
