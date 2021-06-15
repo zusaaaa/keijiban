@@ -35,7 +35,7 @@ class CommentController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * 新たに作成したリソースをストレージに格納する。
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response

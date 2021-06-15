@@ -29,7 +29,7 @@ class RegisterController extends Controller
     use RegistersUsers;
 
     /**
-     * Where to redirect users after registration.
+     * 登録の後にユーザーをどの画面にリダイレクトさせるか
      *
      * @var string
      */
@@ -61,7 +61,7 @@ class RegisterController extends Controller
 
     public function pre_check(Request $request) {
         $this->validator($request->all())->validate();
-        //flash data
+        //メールアドレスのみflashデータとしてセッションに保存
         $request->flashOnly("email");
 
         $bridge_request = $request->all();
